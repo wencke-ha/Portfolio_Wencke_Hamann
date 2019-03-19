@@ -1,45 +1,14 @@
-<!DOCTYPE html> <!--Kommentare: ausrufezeichen, zweimal bindestrich-->
-<html>
-    <head>
-        <title>Wencke Hamann - Integrated Designer</title>
-        <meta charset="utf-8">  
-    </head>
-    <body bgcolor="#C6DEFF">
+{{> head}}
     <header>
-     <h1>Hi!</h1> <img width=30% src="Images/Pfeil.png">
-     <h2>I am Wencke Hamann. i am a regualar human being.</h2>
-
-    </header>
+        <h1>Hi!</h1> <img width=30% src="Images/Pfeil.png">
+        <h2>I am Wencke Hamann. I am a regular human being.</h2>
+     </header>
     <main>
-        <!--<div>
-            <div>
-                <a href="projects.html"><img src="Images/Kreis1.png"></a>
-            </div>
-            <div>
-                <a href="aboutme.html"><img src="Images/Kreis1.png"></a> 
-            </div>
-            <div>
-                <a href="illustrations.html"><img src="Images/Kreis1.png"></a> 
-            </div>
-           
-        </div>-->
-
-        
-
-        {{#section projects multiple=true}}
-            <a style="background-image: url('{{background type=image tag=false}}'); width: 100px; height: 100px; border-radius: 50%; display: block" href="{{_permalink}}">
+  
+        {{#section startpoints multiple=true}} <!-- ohne mutiple tag weil wir nur ein orjekt anzeigen wollen-->
+            <a style="background-image: url('{{background type=image width=500 height=500 tag=false }}'); width: 500px; height: 500px; border-radius: 50%; display: block" href="{{link}}"> <!-- /projects -->
                 <p>{{title}}</p>
             </a>
         {{/section}}
-
-        </a>
     </main>
-    <footer>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-           
-        </ul>
-    </footer>
-    </body>
-</html>
+{{> footer}}
