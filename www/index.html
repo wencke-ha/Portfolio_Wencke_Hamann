@@ -4,7 +4,7 @@
         <title>Wencke Hamann - Integrated Designer</title>
         <meta charset="utf-8">  
     </head>
-    <body>
+    <body bgcolor="#C6DEFF">
     <header>
      <h1>Hi!</h1> <img width=30% src="Images/Pfeil.png">
      <h2>I am Wencke Hamann. i am a regualar human being.</h2>
@@ -24,14 +24,14 @@
            
         </div>-->
 
-        <a href="projects.html">
-            <h2>Projects</h2>
-        </a>
-        <a href="aboutme.html">
-            <h2>About me</h2>
-        </a>
-        <a href="illustrations.html">
-            <h2>Illustrations</h2>
+        
+
+        {{#section projects multiple=true}}
+            <a style="background-image: url('{{background type=image tag=false}}'); width: 100px; height: 100px; border-radius: 50%; display: block" href="{{_permalink}}">
+                <p>{{title}}</p>
+            </a>
+        {{/section}}
+
         </a>
     </main>
     <footer>
