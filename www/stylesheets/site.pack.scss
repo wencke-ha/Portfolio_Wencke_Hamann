@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Mono');
 
 *, *:before, *:after {
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 10px;
   box-sizing: inherit;
 }
 
@@ -14,22 +14,47 @@ html {
   box-sizing: border-box;
 }
 
-header h1 {       // nimmt nun nur header h1 elemente -> spezifische regeln für einzelne Elemente festlegen 
-font-size: 2em; // wird nach festgelegter Größe im html zu reguliert; em ist die Einheit 
-  font-weight: regular;
-  text-align: center;
+body {
+  position: relative;
 }
-header h2 {
-text-align: center;
-font-weight: regular;
-fontsize: 1em;
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 2em; // wird nach festgelegter Größe im html zu reguliert; em ist die Einheit 
+    font-weight: regular;
+    text-align: center;
+  }
+
+  h2 {
+  text-align: center;
+  font-weight: regular;
+  font-size: 1em;
+
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
 }
 
 // im html: class vergeben (im css wird das dann als . angegeben) man kann mehrere klassen vergeben mit leerzeichen ; oder id vergeben 
 // grundlegende elemente: normaler selektor 
 // classes für spezifische Dinge (css tutorial: w3school.com
 
+.hi {
+  //border-style: dotted;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
 
 // Footer 
 
@@ -72,16 +97,49 @@ footer {
   }
 }
 
+a {
+  text-decoration:none;
+  color: black;
+}
 
+#po {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 
 .startpoints {
-
+  position: relative;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   display: block;
   background-size: 220px;
- 
+
+  &:nth-child(2) {
+    margin-top: 5em;
+  }
+
+  &:hover {
+    background-image: none !important;
+    background: #123456;
+
+    p {
+      display: initial;
+      color: white;
+    }
+  }
+
+  p {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
 }
 
 .projects {
@@ -95,3 +153,4 @@ footer {
 width: 30%;
 margin: 0,5%;
 }
+

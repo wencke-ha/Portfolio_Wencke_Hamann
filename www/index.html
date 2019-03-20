@@ -1,20 +1,16 @@
 {{> head}}
     <header>
-      
+        <div class="hi"> <h1>Hi!</h1> <img width=8% src="Images/Pfeil.png"></div>
+        <h2>I am Wencke Hamann.</h2>
      </header>
     <main>
-        <div>
-                <h1 style="float: left">Hi! <img width=5% src="Images/Pfeil.png" ></h1>
-                <h2>I am Wencke Hamann.</h2>
-        </div>
-       
-
-        {{#section startpoints multiple=true}} 
-        <a class="startpoints" style="background-image: url('{{background type=image tag=false}}')" href="{{link}}"> <!-- /projects -->
+        {{#section startpoints multiple=true}}
+            <a class="startpoints" style="background-image: url('{{background type=image tag=false}}')" href="{{link}}"> <!-- /projects -->
                 <p>{{title}}</p>
             </a>
         {{/section}}
-
     
-    </main>
+    </main> 
+    
+    
 {{> footer}}
