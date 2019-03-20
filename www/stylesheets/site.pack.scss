@@ -1,4 +1,6 @@
 
+// CSS Tutorial w3school.com
+
 @import url('https://fonts.googleapis.com/css?family=PT+Mono');
 
 *, *:before, *:after {
@@ -18,22 +20,47 @@ body {
   position: relative;
 }
 
+// Header
+
 header {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 2em;
+  //border-style: dashed;
+  
+  .hi {
+    margin: 0;
+    //border-style: dashed;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .pfeil {
+      width: 10%;
+      height: 90%;
+    }  
+  }
+/*
+  .Iam{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    //border-style: dashed;
+    justify-content: center;
+    font-weight: 300;
+    
+    
+  }*/
 
   h1 {
-    font-size: 2em; // wird nach festgelegter Größe im html zu reguliert; em ist die Einheit 
+    font-size: 2.5em; // wird nach festgelegter Größe im html zu reguliert; em ist die Einheit 
     font-weight: regular;
-    text-align: center;
   }
 
   h2 {
-  text-align: center;
   font-weight: regular;
-  font-size: 1em;
+  font-size: 1.2em;
 
   }
 }
@@ -43,18 +70,7 @@ main {
   justify-content: space-around;
 }
 
-// im html: class vergeben (im css wird das dann als . angegeben) man kann mehrere klassen vergeben mit leerzeichen ; oder id vergeben 
-// grundlegende elemente: normaler selektor 
-// classes für spezifische Dinge (css tutorial: w3school.com
 
-.hi {
-  //border-style: dotted;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  
-}
 
 // Footer 
 
@@ -109,21 +125,30 @@ a {
   
 }
 
+// Startpoints 
+
 .startpoints {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   display: block;
-  background-size: 220px;
+  background-size: 290px;
 
   &:nth-child(2) {
-    margin-top: 5em;
+    margin-top: 13em;
   }
+  &:first-child {
+    margin-top: 7em;
+  }
+  &:last-child {
+    margin-top: 7em;
+  }
+
 
   &:hover {
     background-image: none !important;
-    background: #123456;
+    background: #C8DCF3;
 
     p {
       display: initial;
@@ -142,15 +167,41 @@ a {
   }
 }
 
+// Projects
+
 .projects {
-  width: 500px; 
-  height: 500px; 
+  position: relative;
+  width: 220px; 
+  height: 220px; 
   border-radius: 50%;
+  background-size: 250px;
+  
+
+  &:hover {
+    background-image: none !important;
+    background: #C8DCF3;
+
+    p {
+      display: initial;
+      color: white;
+    }
+  }
+  p {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
 
 }
 
-.image {
-width: 30%;
-margin: 0,5%;
-}
 
+.aboutme {
+  width:200px;
+  height:200px;
+  border-radius: 50%;
+  background-size: 200px;
+}

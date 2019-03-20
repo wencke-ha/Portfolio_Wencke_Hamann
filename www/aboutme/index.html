@@ -1,9 +1,13 @@
 {{> head}}
 
                        <main>
-                           <div class=aboutme>
-    {{#section aboutme}} 
-            {{cover type=image}}
+                           <div>
+    {{#section aboutme }} 
+
+    <div class="aboutme" style="background-image: url('{{background type=image tag=false}}')"></div>
+  
+            <!--{{cover type=image}}-->
+            
             {{description type=html}}
      
      {{/section}}
