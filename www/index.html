@@ -1,14 +1,20 @@
 {{> head}}
     <header>
-        <h1>Hi!</h1> <img width=30% src="Images/Pfeil.png">
-        <h2>I am Wencke Hamann. I am a regular human being.</h2>
+      
      </header>
     <main>
-  
-        {{#section startpoints multiple=true}} <!-- ohne mutiple tag weil wir nur ein orjekt anzeigen wollen-->
-            <a style="background-image: url('{{background type=image width=500 height=500 tag=false }}'); width: 500px; height: 500px; border-radius: 50%; display: block" href="{{link}}"> <!-- /projects -->
+        <div>
+                <h1 style="float: left">Hi! <img width=5% src="Images/Pfeil.png" ></h1>
+                <h2>I am Wencke Hamann.</h2>
+        </div>
+       
+
+        {{#section startpoints multiple=true}} 
+        <a class="startpoints" style="background-image: url('{{background type=image tag=false}}')" href="{{link}}"> <!-- /projects -->
                 <p>{{title}}</p>
             </a>
         {{/section}}
+
+    
     </main>
 {{> footer}}
