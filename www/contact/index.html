@@ -1,5 +1,13 @@
 {{> head}}
 <h2>Contact</h2>
-
-Ruf an.
+{{#section contact}}
+    <p>
+        {{name}}<br>
+        {{address1}}<br>
+        {{address2}}<br>
+    </p>
+    <p>
+    <a class="a-mail" href="#" data-name="{{mailname label='E-Mail-Name'}}" data-domain="{{maildomain label='E-Mail-Domain'}}" data-tld="{{mailtld label='E-Mail-Domainendung'}}" onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"></a>
+    </p>
+{{/section}}
 {{> footer}}

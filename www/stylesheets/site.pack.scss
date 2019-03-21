@@ -37,21 +37,19 @@ header {
     flex-direction: row;
     justify-content: center;
     .pfeil {
-      width: 10%;
-      height: 90%;
+      width: 8%;
+      height: 70%; 
     }  
   }
-/*
+
   .Iam{
     padding: 0;
     margin: 0;
     display: flex;
     //border-style: dashed;
     justify-content: center;
-    font-weight: 300;
-    
-    
-  }*/
+    font-weight: 300; 
+  }
 
   h1 {
     font-size: 2.5em; // wird nach festgelegter Größe im html zu reguliert; em ist die Einheit 
@@ -60,7 +58,7 @@ header {
 
   h2 {
   font-weight: regular;
-  font-size: 1.2em;
+  font-size: 0.85em;
 
   }
 }
@@ -171,10 +169,12 @@ a {
 
 .projects {
   position: relative;
-  width: 220px; 
-  height: 220px; 
+  width: 300px; 
+  height: 300px; 
   border-radius: 50%;
-  background-size: 250px;
+  background-size: 350px;
+  display: block;
+  margin:2em;
   
 
   &:hover {
@@ -204,4 +204,10 @@ a {
   height:200px;
   border-radius: 50%;
   background-size: 200px;
+  font-size: ;
+}
+
+// Mailadresse anklickbar ohne dass sie von Bots gefunden werden kann
+.a-mail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 }
